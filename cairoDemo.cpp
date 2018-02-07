@@ -5,7 +5,8 @@
 using std::string;
 using namespace std;
  
- 
+// Write "hello world" to a .png file
+
 int main(int argc, char* argv[])
 {                               
   int x,y,width,height;         
@@ -16,6 +17,12 @@ int main(int argc, char* argv[])
   width = 200;                  
   height = 40;                  
   size_font=20.0;               
+
+  if (argc != 2) {
+    cerr << "Usage: " << argv[0] << " filename.png" << endl;
+    exit(1);
+  }
+
   string file_path(argv[1]);    
  
  
